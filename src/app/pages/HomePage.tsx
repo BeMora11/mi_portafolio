@@ -3,8 +3,6 @@ import { faArrowDown, faCaretUp, faEnvelope, faPhone } from '@fortawesome/free-s
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import image from './../../assets/img/developer.png';
 import Card from '../components/Card';
-import { Document, Page } from 'react-pdf';
-import cv from './../../assets/docs/cv.pdf';
 import { motion } from 'framer-motion';
 
 const HomePage = () => {
