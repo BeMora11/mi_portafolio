@@ -1,27 +1,16 @@
 import React from 'react'
-import { faArrowDown, faCaretUp, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import image from './../../assets/img/developer.png';
 import Card from '../components/Card';
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const HomePage = () => {
   return (
     <div className='bg-slate-900 overflow-x-hidden'>
-      <motion.header
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        id='header'
-        className='h-96 flex flex-col items-center justify-center relative mb-8 px-8'
-      >
-        <h4 className='text-3xl font-semibold text-blue-200 mb-6 text-center'>Hola soy Erik, soy desarrollador web, y estoy aqui para crear tus sitios y aplicaciones a tu medida.</h4>
-        <a href='#aboutMe' className='btn-lg btnPrimary shadow-md'>
-          <FontAwesomeIcon icon={faArrowDown} className='mr-2 animate-bounce' />
-          Ver más
-        </a>
-      </motion.header>
-
+      <Header />
       <div className="grid grid-cols-12 gap-5 p-4 mb-5">
         <motion.div initial={{ opacity: 0, x: 400 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className='col-span-12 bg-transparent p-5' id='aboutMe'>
           <h4 className='title text-center mb-8'>Sobre mi</h4>
@@ -37,7 +26,7 @@ const HomePage = () => {
           </p>
         </motion.div>
         <motion.h4 initial={{ opacity: 0, x: -400 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} className='col-span-12 text-center title mb-5'>Mis experiencias</motion.h4>
-        <motion.div className='col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} >
+        <motion.div className='col-span-12 sm:col-span-6 md:col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} >
           <Card className='bg-slate-900 shadow-slate-500 h-full'>
             <h4 className='subtitle text-center mb-5'>Blog Camaleón</h4>
             <p className='text'>
@@ -54,7 +43,7 @@ const HomePage = () => {
             </div>
           </Card>
         </motion.div>
-        <motion.div className='col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} >
+        <motion.div className='col-span-12 sm:col-span-6 md:col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} >
           <Card className='bg-slate-900 shadow-slate-500 h-full'>
             <h4 className='subtitle text-center mb-5'>DIF (Servicio social)</h4>
             <p className='text'>
@@ -74,7 +63,7 @@ const HomePage = () => {
             </div>
           </Card>
         </motion.div>
-        <motion.div className='col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} >
+        <motion.div className='col-span-12 sm:col-span-6 md:col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} >
           <Card className='bg-slate-900 shadow-slate-500 h-full'>
             <h4 className='subtitle text-center mb-5'>CAPDAM (Practicas profesionales)</h4>
             <p className='text'>
@@ -95,7 +84,7 @@ const HomePage = () => {
             </div>
           </Card>
         </motion.div>
-        <motion.div className='col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} >
+        <motion.div className='col-span-12 sm:col-span-6 md:col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} >
           <Card className='bg-slate-900 shadow-slate-500 h-full'>
             <h4 className='subtitle text-center mb-1'>Desarrollador web en Logistica Multimodal Especializada</h4>
             <h6 className='mb-5 text-center text-gray-200'>2021-2023</h6>
@@ -120,7 +109,7 @@ const HomePage = () => {
             </div>
           </Card>
         </motion.div>
-        <motion.div className='col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} >
+        <motion.div className='col-span-12 sm:col-span-6 md:col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} >
           <Card className='col-span-4 bg-slate-900 shadow-slate-500 h-full'>
             <h4 className='subtitle text-center mb-1'>Desarrollador Front-End</h4>
             <h6 className='mb-5 text-center text-gray-200'>Trabajo actual</h6>
@@ -152,33 +141,7 @@ const HomePage = () => {
           <FontAwesomeIcon icon={faCaretUp} />
         </a>
       </motion.div>
-
-      <footer className='bg-slate-900 h-60 p-5'>
-        <div className='flex items-center gap-x-8 mb-4'>
-          <hr className='border-1 border-slate-200 w-full' />
-          <div>
-            <a href="https://github.com/BeMora11" target='_blank' rel="noreferrer">
-              <div className='icon'>
-                <i className="fa-brands fa-github text-lg"></i>
-              </div>
-            </a>
-          </div>
-          <hr className='border-1 border-slate-200 w-full' />
-        </div>
-        <div className='flex flex-col items-center gap-4'>
-          <h5 className='text-slate-200 text-lg font-medium'>
-            <FontAwesomeIcon className='mr-2' icon={faEnvelope} />
-            dronemaxis_935@outlook.com
-          </h5>
-          <h5 className='text-slate-200 text-lg font-medium'>
-            <FontAwesomeIcon className='mr-2' icon={faPhone} />
-            312 189 9296
-          </h5>
-          <h5 className='text-slate-200 text-lg font-medium'>
-            Copyright &copy; {new Date().getFullYear()} Todos los derechos reservados.
-          </h5>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
