@@ -17,6 +17,10 @@
 .text {
   @apply font-medium text-gray-200 text-justify;
 }
+
+.link {
+  @apply text-gray-200 hover:text-gray-300 active:text-gray-400 font-medium;
+}
 /* Buttons */
 
 .btn-lg {

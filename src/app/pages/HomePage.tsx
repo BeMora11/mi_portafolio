@@ -1,5 +1,5 @@
 import React from 'react'
-import { faArrowDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import image from './../../assets/img/developer.png';
 import Card from '../components/Card';
@@ -129,9 +129,31 @@ const HomePage = () => {
           </Card>
         </motion.div>
         <motion.h4 initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className='col-span-12 text-center title my-5'>Mis proyectos</motion.h4>
-        <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className='col-span-12'>
-          <Card className='bg-slate-900 shadow-slate-500'>
-            <h4 className='subtitle text-center mb-1'>Muy pronto!</h4>
+        <motion.div className='col-span-12 sm:col-span-6 md:col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} >
+          <Card className='col-span-4 bg-slate-900 shadow-slate-500 h-full flex flex-col justify-between'>
+            <h4 className='subtitle text-center mb-5'>Pokedex React Native</h4>
+            <p className='text'>
+              Tomé un curso en Platzi para aprender los fundamentos de React Native. El proyecto consistió en desarrollar una aplicación que consume la API de Pokémon para mostrar una lista de Pokémon, detalles de cada uno, una lista de favoritos y una simulación de inicio de sesión. Utilicé BottomNavigation y colores en la tarjeta de cada Pokémon basados en sus atributos. Para este proyecto, utilicé Expo.
+            </p>
+            <h4 className='link mt-5'><a target='_blank' href="https://github.com/BeMora11/Pokedex_react_native.git" rel="noreferrer">Haz click para ver el epositorio</a></h4>
+          </Card>
+        </motion.div>
+        <motion.div className='col-span-12 sm:col-span-6 md:col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} >
+          <Card className='col-span-4 bg-slate-900 shadow-slate-500 h-full flex flex-col justify-between'>
+            <h4 className='subtitle text-center mb-5'>CRUD Vue + PHP</h4>
+            <p className='text'>
+              Para este proyecto, seguí los fundamentos de un tutorial básico de Vue y adapté un proyecto personal para poner en práctica lo aprendido. El proyecto consiste en un CRUD básico para agregar artículos, mostrarlos en una tabla y poder editar o eliminarlos. Además, construí una API en PHP para que Vue pudiera consumirla.
+            </p>
+            <h4 className='link mt-5'><a target='_blank' href="https://github.com/BeMora11/Vue.js_Articulos/tree/main" rel="noreferrer">Haz click para ver el epositorio</a></h4>
+          </Card>
+        </motion.div>
+        <motion.div className='col-span-12 sm:col-span-6 md:col-span-4' initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} >
+          <Card className='col-span-4 bg-slate-900 shadow-slate-500 h-full flex flex-col justify-between'>
+            <h4 className='subtitle text-center mb-5'>CRUD React</h4>
+            <p className='text'>
+              En este proyecto, creé un pequeño CRUD de usuarios con información básica. Utilicé el localStorage para simular la base de datos. El proyecto permite editar, consultar y dar de alta a un usuario.
+            </p>
+            <h4 className='link mt-5'><a target='_blank' href="https://github.com/BeMora11/App_usuarios_React.git" rel="noreferrer">Haz click para ver el epositorio</a></h4>
           </Card>
         </motion.div>
       </div>
